@@ -1,0 +1,7 @@
+dist/
+tmp/
+.vs/
+*.user
+*.suo
+*.VC.db
+*.log

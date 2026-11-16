@@ -1,0 +1,15 @@
+## Interface: 16001
+## Title: Gemini | Bot Manager
+## Notes: Object inspector, navigation mesh manager, terrain destinations and waypoint steering for grid.dll.
+## Author: xhonorbuddy
+## Version: 1.0.0
+## SavedVariables: GeminiDB
+
+Core.lua
+Bridge.lua
+Objects.lua
+Navigation.lua
+Steering.lua
+Drawing.lua
+UI.lua
+Main.lua

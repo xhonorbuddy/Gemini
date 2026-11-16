@@ -1,0 +1,19 @@
+name: Test and package
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  addon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua 5.1
+        run: sudo apt-get update && sudo apt-get install -y lua5.1
+      - name: Integration tests
+        run: lua5.1 tests/run.lua
+      - name: Package addon
+        run: |
+          mkdir -p dist
+          zip -r dist/Gemini.zip Gemini
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Gemini-addon
+          path: dist/Gemini.zip
